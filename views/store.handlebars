@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Store</title>
+      <link rel="stylesheet" href="/style/libs/hover.css">
+    <link rel="stylesheet" href="/style/libs/swiper.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway|Source+Code+Pro" rel="stylesheet">
+    <link rel="stylesheet" href="/style/store.css">
+</head>
+<body>
+    
+    <div class="app">
+
+      
+        <section class="app__banner">
+
+            <div class="app__bannerimg" data-src="/images/banner_store.png"  data-pos-x="left" data-parallax>
+
+                <header class="app__header">
+                    <nav class="app__nav">
+
+
+                        <a href="#" class="logo"> <img src="/images/logo.png" alt=""></a>
+
+                        <ul class="app__navbar1">
+
+                            <a href="#" class="app__navlinks1 hvr-underline-from-left">Home</a>
+                            <a href="#" class="app__navlinks1 hvr-underline-from-left">Productos</a>
+                            <a href="#" class="app__navlinks1 hvr-underline-from-left">Ofertas</a>
+                            <a href="#" class="app__navlinks1 hvr-underline-from-left">Novedades</a>
+
+
+                        </ul>
+
+
+                        <div class="app__navbar2">
+
+                            <a href="#" class="app__navlinks1 hvr-underline-from-left" id="signin">Iniciar Sesión</a>
+
+
+                            <div class="app__iconos">
+
+                                <a href="#" class="app__navlinks2"><img src="/images/lupa.png" alt=""></a>
+                                <div class="app__navline"></div>
+                                <a href="#" class="app__navlinks2"><img src="/images/bolsa.png" alt=""></a>
+
+
+
+
+                            </div>
+                        </div>
+
+
+                    </nav>
+
+
+
+
+
+
+                </header>
+
+            </div>
+
+
+
+        </section>
+
+        {{#each productos}}
+            <div>{{nombre}}</div>
+            <div>{{precio}}</div>
+        {{/each}}
+
+    </div>
+
+ <!-- library -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="/js/libs/parallax.js"></script>
+
+    <script src="/js/libs/swipe.js"></script>
+
+    <script src="/js/main.js"></script>
+
+
+
+    <script>
+        ScrollReveal().reveal('.reveal');
+    </script>
+
+</body>
+</html>
