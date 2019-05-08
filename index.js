@@ -66,6 +66,17 @@ app.get('/store/:categoria?', function(request, response){
 
   //solo si en params categoría hay algún valor entonces a query se le agrega el request params categoria. Si no tiene valor query está vacío
 
+  if (request.params.categoria){
+    query.categoria = request.params.categoria;
+  }
+
+  if (request.query.tipo){
+    query.tipo = request.query.tipo;
+  }
+
+  if (request.query.altura){
+    query.altura = { $lte: parseInt(request.query.altura)};
+  }
   
   //colección
   
@@ -83,7 +94,10 @@ app.get('/store/:categoria?', function(request, response){
     
     var contexto = {
       productos: docs,
-      
+      valorAltura: request.query.altura|10,
+      categoria: request.params.categoria,
+      esflores: request.params.categoria == "flores",
+      esmateras: request.params.categoria == "materas",
     }
     
     response.render('store', contexto);
