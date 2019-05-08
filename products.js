@@ -2,213 +2,115 @@
 module.exports = [
 
     {
-        id: 2,
         nombre: 'Rosa rugosa',
         precio: 35.000,
         etiqueta: '15% OFF',
         like: false,
-        imagen: ['images/rosaRugosa.jpg', 'images/rosaRugosa.jpg', ],
+        imagen: ['images/rosaRugosa1.jpg', 'images/rosaRugosa2.jpg', 'images/rosaRugosa3.jpg' ],
         categoria: 'flores',
         tipo: 'rosas',
-        altura: '15 cm'
+        altura: '15 cm',
+        color: ['rosa', 'blanco', 'rojo'],
 
     },
 
-    
     {
-        id: 2,
-        nombre: 'Rosa rugosa',
-        precio: 35.000,
-        etiqueta: '15% OFF',
+        nombre: 'Clavel',
+        precio: 22.000,
+        etiqueta: null,
         like: false,
-        imagen: ['images/rosaRugosa.jpg', 'images/rosaRugosa.jpg', ],
+        imagen: ['images/clavel1.jpg', 'images/clavel2.jpg', 'images/clavel3' ],
         categoria: 'flores',
-        tipo: 'rosas',
-        altura: '15 cm'
+        tipo: 'claveles',
+        altura: '20 cm',
+        color: ['rosa', 'blanco', 'rojo', 'amarillo'],
 
     },
 
-    
     {
-        id: 3,
         nombre: 'Rosa rugosa',
         precio: 35.000,
         etiqueta: '15% OFF',
         like: false,
-        imagen: ['images/rosaRugosa.jpg', 'images/rosaRugosa.jpg', ],
+        imagen: ['images/rosaRugosa.jpg', 'images/rosaRugosa.jpg', 'images/rosaRugosa.jpg' ],
         categoria: 'flores',
         tipo: 'rosas',
-        altura: '15 cm'
+        altura: '15 cm',
+        color: ['rosa', 'blanco', 'rojo'],
 
     },
 
-    
+
     {
         id: 4,
         nombre: 'Rosa rugosa',
         precio: 35.000,
         etiqueta: '15% OFF',
         like: false,
-        imagen: ['images/rosaRugosa.jpg', 'images/rosaRugosa.jpg', ],
+        imagen: ['images/rosaRugosa.jpg', 'images/rosaRugosa.jpg', 'images/rosaRugosa.jpg' ],
         categoria: 'flores',
         tipo: 'rosas',
-        altura: '15 cm'
+        altura: '15 cm',
+        color: ['rosa', 'blanco', 'rojo'],
 
     },
 
-    
+
     {
-        id: 5,
         nombre: 'Rosa rugosa',
         precio: 35.000,
         etiqueta: '15% OFF',
         like: false,
-        imagen: ['images/rosaRugosa.jpg', 'images/rosaRugosa.jpg', ],
-        categoria: 'flores',
+        imagen: ['images/rosaRugosa.jpg', 'images/rosaRugosa.jpg', 'images/rosaRugosa.jpg' ],
+        categoria: 'materas',
         tipo: 'rosas',
-        altura: '15 cm'
+        altura: '15 cm',
+        color: ['rosa', 'blanco', 'rojo'],
 
     },
 
-    
     {
-        id: 6,
         nombre: 'Rosa rugosa',
         precio: 35.000,
         etiqueta: '15% OFF',
         like: false,
-        imagen: ['images/rosaRugosa.jpg', 'images/rosaRugosa.jpg', ],
-        categoria: 'flores',
+        imagen: ['images/rosaRugosa.jpg', 'images/rosaRugosa.jpg', 'images/rosaRugosa.jpg' ],
+        categoria: 'materas',
         tipo: 'rosas',
-        altura: '15 cm'
+        altura: '15 cm',
+        color: ['rosa', 'blanco', 'rojo'],
 
     },
 
-    
     {
-        id: 7,
         nombre: 'Rosa rugosa',
         precio: 35.000,
         etiqueta: '15% OFF',
         like: false,
-        imagen: ['images/rosaRugosa.jpg', 'images/rosaRugosa.jpg', ],
-        categoria: 'flores',
+        imagen: ['images/rosaRugosa.jpg', 'images/rosaRugosa.jpg', 'images/rosaRugosa.jpg' ],
+        categoria: 'interiores',
         tipo: 'rosas',
-        altura: '15 cm'
+        altura: '15 cm',
+        color: ['rosa', 'blanco', 'rojo'],
 
     },
 
-    
     {
-        id: 8,
         nombre: 'Rosa rugosa',
         precio: 35.000,
         etiqueta: '15% OFF',
         like: false,
-        imagen: ['images/rosaRugosa.jpg', 'images/rosaRugosa.jpg', ],
-        categoria: 'flores',
+        imagen: ['images/rosaRugosa.jpg', 'images/rosaRugosa.jpg', 'images/rosaRugosa.jpg' ],
+        categoria: 'interiores',
         tipo: 'rosas',
-        altura: '15 cm'
+        altura: '15 cm',
+        color: ['rosa', 'blanco', 'rojo'],
 
     },
+
 
     
-    {
-        id: 9,
-        nombre: 'Rosa rugosa',
-        precio: 35.000,
-        etiqueta: '15% OFF',
-        like: false,
-        imagen: ['images/rosaRugosa.jpg', 'images/rosaRugosa.jpg', ],
-        categoria: 'flores',
-        tipo: 'rosas',
-        altura: '15 cm'
-
-    },
-
     
-    {
-        id: 10,
-        nombre: 'Rosa rugosa',
-        precio: 35.000,
-        etiqueta: '15% OFF',
-        like: false,
-        imagen: ['images/rosaRugosa.jpg', 'images/rosaRugosa.jpg', ],
-        categoria: 'flores',
-        tipo: 'rosas',
-        altura: '15 cm'
-
-    },
-
-    
-    {
-        id: 11,
-        nombre: 'Rosa rugosa',
-        precio: 35.000,
-        etiqueta: '15% OFF',
-        like: false,
-        imagen: ['images/rosaRugosa.jpg', 'images/rosaRugosa.jpg', ],
-        categoria: 'flores',
-        tipo: 'rosas',
-        altura: '15 cm'
-
-    },
-
-    
-    {
-        id: 12,
-        nombre: 'Rosa rugosa',
-        precio: 35.000,
-        etiqueta: '15% OFF',
-        like: false,
-        imagen: ['images/rosaRugosa.jpg', 'images/rosaRugosa.jpg', ],
-        categoria: 'flores',
-        tipo: 'rosas',
-        altura: '15 cm'
-
-    },
-
-    
-    {
-        id: 13,
-        nombre: 'Rosa rugosa',
-        precio: 35.000,
-        etiqueta: '15% OFF',
-        like: false,
-        imagen: ['images/rosaRugosa.jpg', 'images/rosaRugosa.jpg', ],
-        categoria: 'flores',
-        tipo: 'rosas',
-        altura: '15 cm'
-
-    },
-
-    
-    {
-        id: 14,
-        nombre: 'Rosa rugosa',
-        precio: 35.000,
-        etiqueta: '15% OFF',
-        like: false,
-        imagen: ['images/rosaRugosa.jpg', 'images/rosaRugosa.jpg', ],
-        categoria: 'flores',
-        tipo: 'rosas',
-        altura: '15 cm'
-
-    },
-
-    
-    {
-        id: 15,
-        nombre: 'Rosa rugosa',
-        precio: 35.000,
-        etiqueta: '15% OFF',
-        like: false,
-        imagen: ['images/rosaRugosa.jpg', 'images/rosaRugosa.jpg', ],
-        categoria: 'flores',
-        tipo: 'rosas',
-        altura: '15 cm'
-
-    },
 
 
 ];

@@ -12,6 +12,38 @@ var app = express();
 
 var motorRender= require('express-handlebars');
 
+//mongo client
+var MongoClient= require('mongodb').MongoClient;
+
+//assert
+//para verificar que no haya un null
+var assert= require('assert');
+
+//constante de URL para representar la conexión a la base de datos
+const url = 'mongodb://localhost:27017';
+
+//nombre de la base de datos creada en mongp
+const dbName= 'store';
+
+//crear un nuevo mongo client
+const client= new MongoClient(url, { useNewUrlParser: true });
+
+var db= null;
+
+//conectarnos a la base de datos
+
+client.connect(function(err) {
+  //si error es diferente de nulo
+  assert.equal(null, err);
+  console.log("estamos conectados");
+  
+  //conectarnos a la db
+  db = client.db(dbName);
+  
+  //client.close();
+});
+
+
 // configurar la carpeta public como "pública"
 app.use(express.static('public'));
 
@@ -26,18 +58,63 @@ app.get('/', function(req, res) {
 });
 
 // configurar la ruta store
-app.get('/store', function(request, response){
-    response.render('store', {productos: prod});
+app.get('/store/:categoria?', function(request, response){
+  
+  console.log(request.params.categoria);
+  
+  var query = {};
+
+  //solo si en params categoría hay algún valor entonces a query se le agrega el request params categoria. Si no tiene valor query está vacío
+
+  
+  //colección
+  
+  const products= db.collection('products');
+  
+  //dentro de esta función tenemos los resultados de ir a buscar los productos
+  products.find(query).toArray(function(err, docs){
+    
+    assert.equal(null,err);
+    console.log('encontramos los documentos');
+    
+    //nos muestra cuántos documentos tenemos
+    console.log(docs.length);
+    
+    
+    var contexto = {
+      productos: docs,
+      
+    }
+    
+    response.render('store', contexto);
+  });
+  
 });
 
 // configurar la ruta product
-app.get('/product', function(request, response){
-    response.send('product');
+app.get('/product/:nombre', function(request, response){
+
+  //de nuevo base de datos porque se cmabia de link
+  const products= db.collection('products');
+
+  products.find({ nombre: request.params.nombre}).toArray(function(err, docs){
+    
+    assert.equal(null,err);
+    console.log('encontramos los docs');
+    
+    //nos muestra cuántos documentos tenemos
+    console.log(docs[0]);
+    
+    
+    var contexto = docs[0];
+    
+    response.render('product', contexto);
+  });
 });
 
 // configurar la ruta bag
 app.get('/bag', function(request, response){
-    response.send('bag');
+  response.send('bag');
 });
 
 // configurar la ruta checkout

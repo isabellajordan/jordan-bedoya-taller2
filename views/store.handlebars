@@ -1,33 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Store</title>
-      <link rel="stylesheet" href="/style/libs/hover.css">
+    <link rel="stylesheet" href="/style/libs/hover.css">
     <link rel="stylesheet" href="/style/libs/swiper.css">
     <link href="https://fonts.googleapis.com/css?family=Raleway|Source+Code+Pro" rel="stylesheet">
     <link rel="stylesheet" href="/style/store.css">
 </head>
+
 <body>
-    
+
     <div class="app">
 
-      
+
         <section class="app__banner">
 
-            <div class="app__bannerimg" data-src="/images/banner_store.png"  data-pos-x="left" data-parallax>
+            <div class="app__bannerimg" data-src="/images/banner_store.png" data-pos-x="left" data-parallax>
 
                 <header class="app__header">
                     <nav class="app__nav">
 
 
-                        <a href="#" class="logo"> <img src="/images/logo.png" alt=""></a>
+                        <a href="/" class="logo"> <img src="/images/logo.png" alt=""></a>
 
                         <ul class="app__navbar1">
 
-                            <a href="#" class="app__navlinks1 hvr-underline-from-left">Home</a>
+                            <a href="/" class="app__navlinks1 hvr-underline-from-left">Home</a>
                             <a href="#" class="app__navlinks1 hvr-underline-from-left">Productos</a>
                             <a href="#" class="app__navlinks1 hvr-underline-from-left">Ofertas</a>
                             <a href="#" class="app__navlinks1 hvr-underline-from-left">Novedades</a>
@@ -68,15 +70,86 @@
 
 
         </section>
+<!--
+<div class="app__cont-productos">
 
-        {{#each productos}}
-            <div>{{nombre}}</div>
+            {{#each productos}}
+
+            <div>
+                
+                <img src="{{imagen.[0]}}" width="200px">
+                
+                {{nombre}}
+                </div>
             <div>{{precio}}</div>
+            {{/each}}
+
+        </div>
+
+
+    
+ -->
+
+
+
+      <h1>Tienda</h1>
+
+    <h2>Filtros</h2>
+
+
+
+    <!--
+<ul>
+        <li><a href="/store/flores">Flores</a>
+        </li>
+        <li><a href="/store/materas">Materas</a></li>
+    </ul>
+    -->
+    
+
+    
+
+{{#if esflores}}
+        <label>Ingresa el rango de precio</label>
+        <input class="input-rango" type="range" min="10000" max="30000">
+    {{/if}}
+
+    {{#if esmateras}}
+        Categoría Materas
+    {{/if}}
+
+<a href="/store?tipo=orquideas">Orquideas</a>
+<a href="/store?tipo=rosas">Rosas</a>
+<a href="/store?tipo=claveles">Claveles</a>
+
+<input value={{valorAltura}} id="inputAltura" type="range" name="altura" min="10" max="100">
+
+
+
+    <ul>
+        {{#each productos}}
+        <a href="/product/{{nombre}}">
+         <li>{{nombre}}</li>
+            <li>
+                <img src="{{imagen.[0]}}" width="200px">
+                <h3>{{nombre}}</h3>
+                <p>{{precio}}</p>
+                <p>{{categoria}}</p>
+            </li>
+        </a>
+           
         {{/each}}
+    </ul>
+
+
+
+
 
     </div>
 
- <!-- library -->
+     
+
+    <!-- library -->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="/js/libs/parallax.js"></script>
@@ -84,12 +157,15 @@
     <script src="/js/libs/swipe.js"></script>
 
     <script src="/js/main.js"></script>
+    <script src="/js/store.js"></script>
 
 
 
     <script>
         ScrollReveal().reveal('.reveal');
+
     </script>
 
 </body>
+
 </html>
