@@ -10,12 +10,12 @@ if(localStorage.getItem('listaProductos') != null){
 
 
 var botonesAgregar = document.querySelectorAll('.agregar');
-console.log(botonesAgregar);
+//console.log(botonesAgregar);
 
 botonesAgregar.forEach(botonProducto =>{
 
     //imprime todos los productos de la tienda por su nombre
-    console.log(botonProducto.getAttribute('name'))
+    //console.log(botonProducto.getAttribute('name'))
     botonProducto.addEventListener('click',function(event){
         event.preventDefault;
 

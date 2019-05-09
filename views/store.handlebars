@@ -48,6 +48,9 @@
                                 <a href="#" class="app__navlinks2"><img src="/images/lupa.png" alt=""></a>
                                 <div class="app__navline"></div>
                                 <a href="#" class="app__navlinks2"><img src="/images/bolsa.png" alt=""></a>
+                                
+                                <!-- Me agrega las notificaciones de productos en el carrito -->
+                                <p class="carrito__num"></p>
 
 
 
@@ -130,9 +133,9 @@
         Categoría Materas
         {{/if}}
 
-        <a href="/store?orquideas">Orquideas</a>
-        <a href="/store?rosas">Rosas</a>
-        <a href="/store?claveles">Claveles</a>
+        <a class="filtroTipo" href="/store?orquideas">Orquideas</a>
+        <a class="filtroTipo" href="/store?rosas">Rosas</a>
+        <a class="filtroTipo" href="/store?claveles">Claveles</a>
 
         <input value={{valorAltura}} id="inputAltura" type="range" name="altura" min="10" max="100">
 

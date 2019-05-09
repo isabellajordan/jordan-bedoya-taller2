@@ -61,7 +61,8 @@ app.get('/', function(req, res) {
 app.get('/store/:tipo?', function(request, response){
   
   console.log(request.params.categoria);
-  
+  console.log(request.params.tipo);
+
   var query = {};
 
   //solo si en params categoría hay algún valor entonces a query se le agrega el request params categoria. Si no tiene valor query está vacío
@@ -69,6 +70,7 @@ app.get('/store/:tipo?', function(request, response){
     query.categoria = request.params.categoria;
   }
 
+  //NO FUNCIONA EL FILTRO TIPO
   if (request.query.tipo){
     query.tipo = request.query.tipo;
   }
@@ -82,7 +84,7 @@ app.get('/store/:tipo?', function(request, response){
   const products= db.collection('products');
   
   //dentro de esta función tenemos los resultados de ir a buscar los productos
-  products.find(query).toArray(function(err, docs){
+  products.find(query,{}).toArray(function(err, docs){
     
     assert.equal(null,err);
     console.log('encontramos los documentos');
@@ -94,7 +96,7 @@ app.get('/store/:tipo?', function(request, response){
     var contexto = {
       productos: docs,
       valorAltura: request.query.altura|10,
-      tipo: request.params.tipo,
+      tipo: request.query.tipo,
       esrosas: request.params.tipo == "rosas",
       esclaveles: request.params.tipo == "claveles",
       esorquideas: request.params.tipo == "orquideas",
