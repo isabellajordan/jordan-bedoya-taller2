@@ -1,14 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
+
 <body>
-    
-<h1>{{nombre}}</h1>
+
+    <div class="producto">
+        <img class="producto__imagen" src="{{imagen.[0]}}" width="200px">
+        <h3 class="producto__nombre">{{nombre}}</h3>
+        <p class="producto__precio">{{precio}}</p>
+        <p class="producto__categoria">{{categoria}}</p>
+        <button name="{{nombre}}" class="agregar">Agregar</button>
+    </div>
+
+
 
 </body>
+<script src="/js/store.js"></script>
+<script src="/js/carrito.js"></script>
+
+
 </html>

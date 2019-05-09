@@ -8,5 +8,5 @@ function buscarPorAltura(){
 if(inAltura){
 
     inAltura.addEventListener('change', buscarPorAltura);
-
 }
+

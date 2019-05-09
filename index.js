@@ -58,14 +58,13 @@ app.get('/', function(req, res) {
 });
 
 // configurar la ruta store
-app.get('/store/:categoria?', function(request, response){
+app.get('/store/:tipo?', function(request, response){
   
   console.log(request.params.categoria);
   
   var query = {};
 
   //solo si en params categoría hay algún valor entonces a query se le agrega el request params categoria. Si no tiene valor query está vacío
-
   if (request.params.categoria){
     query.categoria = request.params.categoria;
   }
@@ -95,9 +94,10 @@ app.get('/store/:categoria?', function(request, response){
     var contexto = {
       productos: docs,
       valorAltura: request.query.altura|10,
-      categoria: request.params.categoria,
-      esflores: request.params.categoria == "flores",
-      esmateras: request.params.categoria == "materas",
+      tipo: request.params.tipo,
+      esrosas: request.params.tipo == "rosas",
+      esclaveles: request.params.tipo == "claveles",
+      esorquideas: request.params.tipo == "orquideas",
     }
     
     response.render('store', contexto);

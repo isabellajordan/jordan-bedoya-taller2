@@ -70,7 +70,7 @@
 
 
         </section>
-<!--
+        <!--
 <div class="app__cont-productos">
 
             {{#each productos}}
@@ -92,54 +92,66 @@
 
 
 
-      <h1>Tienda</h1>
-
-    <h2>Filtros</h2>
+        <h1>Tienda</h1>
 
 
+        <div class="carrito">
+        <p>Carrito</p>
+        <span class="carrito__num"></span>
+    </div>
 
-    <!--
+
+    <div class="carrito-desplegado">
+        <h3>Carrito</h3>
+        <ul class="carrito-desplegado__lista"></ul>
+    </div>
+
+        <h2>Filtros</h2>
+
+
+
+        <!--
 <ul>
         <li><a href="/store/flores">Flores</a>
         </li>
         <li><a href="/store/materas">Materas</a></li>
     </ul>
     -->
-    
 
-    
 
-{{#if esflores}}
+
+
+        {{#if esflores}}
         <label>Ingresa el rango de precio</label>
         <input class="input-rango" type="range" min="10000" max="30000">
-    {{/if}}
+        {{/if}}
 
-    {{#if esmateras}}
+        {{#if esmateras}}
         Categoría Materas
-    {{/if}}
+        {{/if}}
 
-<a href="/store?tipo=orquideas">Orquideas</a>
-<a href="/store?tipo=rosas">Rosas</a>
-<a href="/store?tipo=claveles">Claveles</a>
+        <a href="/store?orquideas">Orquideas</a>
+        <a href="/store?rosas">Rosas</a>
+        <a href="/store?claveles">Claveles</a>
 
-<input value={{valorAltura}} id="inputAltura" type="range" name="altura" min="10" max="100">
+        <input value={{valorAltura}} id="inputAltura" type="range" name="altura" min="10" max="100">
 
 
 
-    <ul>
-        {{#each productos}}
-        <a href="/product/{{nombre}}">
-         <li>{{nombre}}</li>
-            <li>
-                <img src="{{imagen.[0]}}" width="200px">
-                <h3>{{nombre}}</h3>
-                <p>{{precio}}</p>
-                <p>{{categoria}}</p>
-            </li>
-        </a>
-           
-        {{/each}}
-    </ul>
+        <ul>
+            {{#each productos}}
+            <div class="producto">
+                <a href="/product/{{nombre}}">
+                    <img class= "producto__imagen" src="{{imagen.[0]}}" width="200px">
+                    <h3 class="producto__nombre">{{nombre}}</h3>
+                    <p class="producto__precio">{{precio}}</p>
+                    <p class="producto__categoria">{{categoria}}</p>
+                </a>
+
+                <button name="{{nombre}}" class="agregar">Agregar</button>
+            </div>
+            {{/each}}
+        </ul>
 
 
 
@@ -147,7 +159,7 @@
 
     </div>
 
-     
+
 
     <!-- library -->
 
@@ -157,12 +169,12 @@
     <script src="/js/libs/swipe.js"></script>
 
     <script src="/js/main.js"></script>
-    <script src="/js/store.js"></script>
-
+    <script src="/js/store.js"></script>}
+    <script src="/js/carrito.js"></script>}
 
 
     <script>
-        ScrollReveal().reveal('.reveal');
+      //  ScrollReveal().reveal('.reveal');
 
     </script>
 
