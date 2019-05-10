@@ -19,7 +19,7 @@
 
         <section class="app__banner">
 
-            <div class="app__bannerimg" data-src="/images/banner_store.png" data-pos-x="left" data-parallax>
+            <div class="app__bannerimg" data-src="/images/banner_store.jpg" data-pos-x="left" data-parallax>
 
                 <header class="app__header">
                     <nav class="app__nav">
@@ -124,18 +124,19 @@
 
 
 
-        {{#if esflores}}
-        <label>Ingresa el rango de precio</label>
-        <input class="input-rango" type="range" min="10000" max="30000">
+        {{#if esorquideas}}
+        Orquideas
         {{/if}}
 
-        {{#if esmateras}}
-        Categoría Materas
+        {{#if esrosas}}
+        Rosas
         {{/if}}
 
-        <a class="filtroTipo" href="/store?orquideas">Orquideas</a>
-        <a class="filtroTipo" href="/store?rosas">Rosas</a>
-        <a class="filtroTipo" href="/store?claveles">Claveles</a>
+
+
+        <a id="filtroTipo" href="/store/orquideas">Orquideas</a>
+        <a id="filtroTipo" href="/store/rosas">Rosas</a>
+        <a id="filtroTipo" href="/store/claveles">Claveles</a>
 
         <input value={{valorAltura}} id="inputAltura" type="range" name="altura" min="10" max="100">
 
@@ -148,10 +149,12 @@
                     <img class= "producto__imagen" src="{{imagen.[0]}}" width="200px">
                     <h3 class="producto__nombre">{{nombre}}</h3>
                     <p class="producto__precio">{{precio}}</p>
-                    <p class="producto__categoria">{{categoria}}</p>
+                    <p class="producto__tipo">{{tipo}}</p>
+                   
                 </a>
 
                 <button name="{{nombre}}" class="agregar">Agregar</button>
+
             </div>
             {{/each}}
         </ul>
@@ -172,8 +175,8 @@
     <script src="/js/libs/swipe.js"></script>
 
     <script src="/js/main.js"></script>
-    <script src="/js/store.js"></script>}
-    <script src="/js/carrito.js"></script>}
+    <script src="/js/store.js"></script>
+    <script src="/js/carrito.js"></script>
 
 
     <script>

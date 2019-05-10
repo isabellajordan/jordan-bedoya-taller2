@@ -60,31 +60,33 @@ app.get('/', function(req, res) {
 // configurar la ruta store
 app.get('/store/:tipo?', function(request, response){
   
-  console.log(request.params.categoria);
-  console.log(request.params.tipo);
-
+  //colección 
+  const products= db.collection('products');
+ 
   var query = {};
 
+  
   //solo si en params categoría hay algún valor entonces a query se le agrega el request params categoria. Si no tiene valor query está vacío
-  if (request.params.categoria){
-    query.categoria = request.params.categoria;
+  if (request.params.tipo){
+    query.tipo = request.params.tipo;
   }
 
+  //XK QUERY
+  /*
   //NO FUNCIONA EL FILTRO TIPO
   if (request.query.tipo){
     query.tipo = request.query.tipo;
   }
+*/
 
   if (request.query.altura){
     query.altura = { $lte: parseInt(request.query.altura)};
   }
-  
-  //colección
-  
-  const products= db.collection('products');
+
+  console.log(request.query.tipo);
   
   //dentro de esta función tenemos los resultados de ir a buscar los productos
-  products.find(query,{}).toArray(function(err, docs){
+  products.find(query).toArray(function(err, docs){
     
     assert.equal(null,err);
     console.log('encontramos los documentos');
@@ -96,11 +98,12 @@ app.get('/store/:tipo?', function(request, response){
     var contexto = {
       productos: docs,
       valorAltura: request.query.altura|10,
-      tipo: request.query.tipo,
+      tipo: request.params.tipo,
       esrosas: request.params.tipo == "rosas",
       esclaveles: request.params.tipo == "claveles",
       esorquideas: request.params.tipo == "orquideas",
-    }
+      
+    };
     
     response.render('store', contexto);
   });

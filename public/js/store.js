@@ -4,11 +4,28 @@ function buscarPorAltura(){
     console.log(inAltura.value);
 }
 
-
 if(inAltura){
 
     inAltura.addEventListener('change', buscarPorAltura);
 }
+
+
+//NO FUNCIONA
+/*
+var filtroTipo = document.querySelectorAll('#filtroTipo');
+function buscarPorTipos(tipo){
+    location.href= '/store?tipo=' + filtroTipo.value;
+    console.log(filtroTipo.value);
+}
+
+if(filtroTipo){
+
+    filtroTipo.addEventListener('change', buscarPorTipos);
+}
+
+filtroTipo.forEach(buscarPorTipos);
+
+*/
 
 /*
 var filtroTipos = document.querySelectorAll('.filtroTipo');
