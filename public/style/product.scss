@@ -63,12 +63,15 @@ html {
   align-content: flex-start;
   align-items: center;
   
+  
   &__banner {
     width: 100%;
     flex-basis: 100%;
     flex-grow: 0;
     flex-shrink: 0;
   }
+  
+  
   
   &__bannerimg {
     display: flex;
@@ -81,6 +84,8 @@ html {
     // background-size: cover;
   }
   
+
+
   &__header {
     display: flex;
     flex-direction: column;

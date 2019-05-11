@@ -99,6 +99,8 @@ app.get('/store/:tipo?', function(request, response){
       productos: docs,
       valorAltura: request.query.altura|10,
       tipo: request.params.tipo,
+
+      //esto ño
       esrosas: request.params.tipo == "rosas",
       esclaveles: request.params.tipo == "claveles",
       esorquideas: request.params.tipo == "orquideas",
@@ -133,7 +135,11 @@ app.get('/product/:nombre', function(request, response){
 
 // configurar la ruta bag
 app.get('/bag', function(request, response){
-  response.send('bag');
+
+  const products= db.collection('products');
+
+
+  response.render('bag');
 });
 
 // configurar la ruta checkout

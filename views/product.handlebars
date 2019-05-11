@@ -5,24 +5,95 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Store</title>
+    <link rel="stylesheet" href="/style/libs/hover.css">
+    <link rel="stylesheet" href="/style/libs/swiper.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway|Source+Code+Pro" rel="stylesheet">
+    <link rel="stylesheet" href="/style/product.css">
 </head>
+
 
 <body>
 
+    <div class="app">
+
+
+        <section class="app__banner">
+
+
+                <header class="app__header">
+                    <nav class="app__nav">
+
+
+                        <a href="/" class="logo"> <img src="/images/logo.png" alt=""></a>
+
+                        <ul class="app__navbar1">
+
+                            <a href="/" class="app__navlinks1 hvr-underline-from-left">Home</a>
+                            <a href="#" class="app__navlinks1 hvr-underline-from-left">Productos</a>
+                            <a href="#" class="app__navlinks1 hvr-underline-from-left">Ofertas</a>
+                            <a href="#" class="app__navlinks1 hvr-underline-from-left">Novedades</a>
+
+
+                        </ul>
+
+
+                        <div class="app__navbar2">
+
+                            <a href="#" class="app__navlinks1 hvr-underline-from-left" id="signin">Iniciar Sesión</a>
+
+
+                            <div class="app__iconos">
+
+                                <a href="#" class="app__navlinks2"><img src="/images/lupa.png" alt=""></a>
+                                <div class="app__navline"></div>
+                                <a href="/bag" class="app__navlinks2"><img src="/images/bolsa.png" alt=""></a>
+                                
+                                <!-- Me agrega las notificaciones de productos en el carrito -->
+                                <p class="carrito__num"></p>
+
+
+
+
+                            </div>
+                        </div>
+
+
+                    </nav>
+
+
+
+
+
+
+                </header>
+
+           
+
+
+
+        </section>
+
+
+
+
     <div class="producto">
-        <img class="producto__imagen" src="{{imagen.[0]}}" width="200px">
+        <img class="producto__imagen" src="../{{imagen.[0]}}" width="200px">
         <h3 class="producto__nombre">{{nombre}}</h3>
         <p class="producto__precio">{{precio}}</p>
         <p class="producto__tipo">{{tipo}}</p>
-        <button name="{{nombre}}" class="agregar">Agregar</button>
+        <button name="{{nombre}}" class="agregarProducto">Agregar</button>
     </div>
 
 
 
 </body>
-<script src="/js/store.js"></script>
-<script src="/js/carrito.js"></script>
+
+  <script src="/js/main.js"></script>
+      <script src="/js/main.js"></script>
+    <script src="/js/store.js"></script>
+    <script src="/js/carrito.js"></script>
+
 
 
 </html>
