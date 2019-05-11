@@ -19,7 +19,7 @@ botonesAgregar.forEach(botonProducto =>{
     botonProducto.addEventListener('click',function(event){
         event.preventDefault;
 
-  //agregar el producto
+  //agregar el producto general
         var padre = this.parentNode;
         var nombre = padre.querySelector('.producto__nombre').innerText;
         var precio = padre.querySelector('.producto__precio').innerText;
@@ -56,10 +56,9 @@ botonesAgregarProducto.forEach(botonProducto =>{
         event.preventDefault;
 
   //agregar el producto
-        var padre = this.parentNode;
-        var nombre = padre.querySelector('.producto__nombre').innerText;
-        var precio = padre.querySelector('.producto__precio').innerText;
-        var imagen = padre.querySelector('.producto__imagen').src;
+        var nombre = document.querySelector('.producto__nombre').innerText;
+        var precio = document.querySelector('.producto__precio').innerText;
+        var imagen = document.querySelector('.producto__imagen').src;
         var producto = {
             nombre: nombre,
             precio: precio,
@@ -80,11 +79,46 @@ botonesAgregarProducto.forEach(botonProducto =>{
 
 
 var carritoNum = document.querySelector('.carrito__num');
+var listaCarrito = document.querySelector('.carrito-desplegado__lista');
 
 function actualizarCarrito(){
     console.log(listaProductos);
     carritoNum.innerHTML = listaProductos.length;
+    listaCarrito.innerHTML = '';
+
+
+    listaProductos.forEach(function(producto,index){
+
+
+        listaCarrito.innerHTML += `<div class="carrito">
+        <p>Carrito</p>
+        <span class="carrito__num"></span>
+    </div>
+
+
+
+
+    <div class="carrito-desplegado">
+        <h3>Carrito</h3>
+        <ul class="carrito-desplegado__lista">
+
+<div class="producto">
+        <img class="producto__imagen" src="../{{imagen.[0]}}" width="200px">
+        <h3 class="producto__nombre">{{nombre}}</h3>
+        <p class="producto__precio">{{precio}}</p>
+        <p class="producto__tipo">{{tipo}}</p>
+     
+    </div>
+
+        </ul>
+        <button class="carrito-desplegado__limpiar">Limpiar carrito</button>
+
+    </div>`
+
+    });
+  
      
 }
 
 actualizarCarrito();
+console.log(listaCarrito);
