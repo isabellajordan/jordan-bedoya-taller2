@@ -1,5 +1,3 @@
-
-
 var listaProductos = [];
 
 //localStorage.setItem('listaProductos', JSON.stringify(listaProductos));
@@ -82,43 +80,41 @@ var carritoNum = document.querySelector('.carrito__num');
 var listaCarrito = document.querySelector('.carrito-desplegado__lista');
 
 function actualizarCarrito(){
+
     console.log(listaProductos);
+
+if(carritoNum != null){
     carritoNum.innerHTML = listaProductos.length;
-    listaCarrito.innerHTML = '';
-
-
-    listaProductos.forEach(function(producto,index){
-
-
-        listaCarrito.innerHTML += `<div class="carrito">
-        <p>Carrito</p>
-        <span class="carrito__num"></span>
-    </div>
-
-
-
-
-    <div class="carrito-desplegado">
-        <h3>Carrito</h3>
-        <ul class="carrito-desplegado__lista">
-
-<div class="producto">
-        <img class="producto__imagen" src="../{{imagen.[0]}}" width="200px">
-        <h3 class="producto__nombre">{{nombre}}</h3>
-        <p class="producto__precio">{{precio}}</p>
-        <p class="producto__tipo">{{tipo}}</p>
-     
-    </div>
-
-        </ul>
-        <button class="carrito-desplegado__limpiar">Limpiar carrito</button>
-
-    </div>`
-
-    });
-  
-     
 }
 
-actualizarCarrito();
+
+
+    if (listaCarrito != null){
+        listaCarrito.innerHTML = '';
+
+        listaProductos.forEach(function(producto,index){
+    
+            listaCarrito.innerHTML += `            <ul>
+            <div class="producto">
+            <img class="producto__imagen" src="../${producto.imagen}" width="200px">
+            <h3 class="producto__nombre">${producto.nombre}</h3>
+            <p class="producto__precio">${producto.precio}</p>
+            <p class="producto__tipo">${producto.tipo}</p>
+         
+        </div>
+        </ul>
+        `
+        });
+
+    }
+ 
+      }
+
+  
+
+
+
+
+
 console.log(listaCarrito);
+actualizarCarrito();
