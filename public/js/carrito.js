@@ -6,8 +6,11 @@ if(localStorage.getItem('listaProductos') != null){
     listaProductos = JSON.parse(localStorage.getItem('listaProductos'));
 }
 
+var listaCarrito = document.querySelector('.carrito-desplegado__lista');
+var carritoNum = document.querySelector('.carrito__num');
 
-var botonesAgregar = document.querySelectorAll('.agregar');
+
+var botonesAgregar = document.querySelectorAll('.producto__agregar');
 //console.log(botonesAgregar);
 
 botonesAgregar.forEach(botonProducto =>{
@@ -76,8 +79,9 @@ botonesAgregarProducto.forEach(botonProducto =>{
 });
 
 
-var carritoNum = document.querySelector('.carrito__num');
-var listaCarrito = document.querySelector('.carrito-desplegado__lista');
+
+
+
 
 function actualizarCarrito(){
 
@@ -103,6 +107,7 @@ if(carritoNum != null){
          
         </div>
         </ul>
+        
         `
         });
 

@@ -89,10 +89,8 @@ app.get('/store/:tipo?', function(request, response){
   products.find(query).toArray(function(err, docs){
     
     assert.equal(null,err);
-    console.log('encontramos los documentos');
-    
     //nos muestra cuántos documentos tenemos
-    console.log(docs.length);
+    console.log('encontramos los documentos', docs.length);
     
     
     var contexto = {
@@ -106,7 +104,7 @@ app.get('/store/:tipo?', function(request, response){
       esorquideas: request.params.tipo == "orquideas",
       
     };
-    
+    console.log(contexto.productos, "ESTOS SON LOS PRODUCTOS QUE PASO AL HBS ----------- UNICRONIOS ROSA DE EL VLAOR DEL INFINITO MEINAHFBSF");
     response.render('store', contexto);
   });
   

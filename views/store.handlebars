@@ -69,12 +69,22 @@
 
         </section>
 
-        
+        <section class="app__tienda">
 
+<div class="app__tienda__titulo">
 
-        <h1>Tienda</h1>
+    <div class="app__tienda__titulo__filtro">
 
-        <h2>Filtros</h2>
+<h3 class="app__tienda__titulo__filtro__texto">Filtros</h3>
+
+    </div>
+
+    <div class="app__tienda__titulo__todas">
+<h3 class="app__tienda__titulo__todas__texto">Todas las flores</h3>
+    </div>
+</div>
+
+     <h2>Filtros</h2>
 
         {{#if esorquideas}}
         Orquideas
@@ -92,11 +102,12 @@
 
         <input value={{valorAltura}} id="inputAltura" type="range" name="altura" min="10" max="100">
 
+<!--Empieza la sección que contiene los productos en lista-->
 
+<div class="app__tienda__contProd">
 
-        <ul>
-            {{#each productos}}
-            <div class="producto">
+  {{#each productos}}
+            <div class="app__tienda__contProd__producto">
                 <a href="/product/{{nombre}}">
                     <img class= "producto__imagen" src="../{{imagen.[0]}}" width="200px">
                     <h3 class="producto__nombre">{{nombre}}</h3>
@@ -105,11 +116,32 @@
                    
                 </a>
 
-                <button name="{{nombre}}" class="agregar">Agregar</button>
+                <button name="{{nombre}}" class="producto__agregar">Agregar</button>
 
             </div>
             {{/each}}
-        </ul>
+
+
+</div>
+
+   
+
+
+
+      
+          
+     
+
+
+
+
+
+
+        </section>
+
+
+        
+
 
 
 
