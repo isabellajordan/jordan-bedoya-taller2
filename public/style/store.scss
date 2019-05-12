@@ -75,7 +75,7 @@ html {
     justify-content: flex-start;
     align-content: flex-start;
     align-items: flex-start;
-    height: 100vh;
+    height: 50vh;
     width: 100%;
     //  background-image: url(/images/banner1.png);
     // background-size: cover;
@@ -186,8 +186,6 @@ html {
       width: 100%;
       height: auto;
 
-      background: coral;
-
       &__filtro {
         width: 45%;
         height: auto;
@@ -217,20 +215,55 @@ html {
       }
     }
 
-&__contProd{
+    &__contProd {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 52%;
+      height: auto;
+      min-height: auto;
+      flex-shrink: 0;
+      justify-content: space-between;
+     // background: cornflowerblue;
 
-display: flex;
-flex-direction: row;
-flex-wrap: wrap;
-width: 70%;
-height: auto;
-min-height: auto;
-flex-shrink: 0;
-justify-content: flex-start;
-background: cornflowerblue;
+      &__producto {
+        width: auto;
+        height: auto;
+        //background: red;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        align-content: center;
 
+        &__contenido {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          align-items: center;
+         // background: yellow;
+          font-family: "Open Sans", sans-serif;
+          text-decoration: none;
 
-}
+        }
 
+        &__nombre{
+          font-style: normal;
+          font-weight: normal;
+          font-size: 18px;
+          line-height: 23px;
+          color: #7C7A7A;
+        }
+
+        &__precio{
+          font-style: normal;
+font-weight: bold;
+font-size: 24px;
+line-height: 30px;
+color: $colorTitulos;
+        }
+
+      }
+    }
   }
 }

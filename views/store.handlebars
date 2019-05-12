@@ -108,11 +108,11 @@
 
   {{#each productos}}
             <div class="app__tienda__contProd__producto">
-                <a href="/product/{{nombre}}">
-                    <img class= "producto__imagen" src="../{{imagen.[0]}}" width="200px">
-                    <h3 class="producto__nombre">{{nombre}}</h3>
-                    <p class="producto__precio">{{precio}}</p>
-                    <p class="producto__tipo">{{tipo}}</p>
+                <a class="app__tienda__contProd__producto__contenido" href="/product/{{nombre}}">
+                    <img class= "app__tienda__contProd__producto__imagen" src="../{{imagen.[0]}}" width="410px">
+                    <h3 class="app__tienda__contProd__producto__nombre">{{nombre}}</h3>
+                    <p class="app__tienda__contProd__producto__precio">{{precio}} COP</p>
+                    <p class="app__tienda__contProd__producto__tipo">{{tipo}}</p>
                    
                 </a>
 
