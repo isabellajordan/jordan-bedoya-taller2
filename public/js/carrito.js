@@ -22,9 +22,9 @@ botonesAgregar.forEach(botonProducto =>{
 
   //agregar el producto general
         var padre = this.parentNode;
-        var nombre = padre.querySelector('.producto__nombre').innerText;
-        var precio = padre.querySelector('.producto__precio').innerText;
-        var imagen = padre.querySelector('.producto__imagen').src;
+        var nombre = padre.querySelector('.app__tienda__contProd__producto__nombre').innerText;
+        var precio = padre.querySelector('.app__tienda__contProd__producto__precio').innerText;
+        var imagen = padre.querySelector('.app__tienda__contProd__producto__imagen').src;
         var producto = {
             nombre: nombre,
             precio: precio,

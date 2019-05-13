@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Store</title>
+    <link rel="stylesheet" href="/style/product.css">
     <link rel="stylesheet" href="/style/libs/hover.css">
     <link rel="stylesheet" href="/style/libs/swiper.css">
     <link href="https://fonts.googleapis.com/css?family=Raleway|Source+Code+Pro" rel="stylesheet">
-    <link rel="stylesheet" href="/style/product.css">
+    
 </head>
 
 
@@ -77,23 +78,48 @@
 
 
 
-        <div class="producto">
-            <img class="producto__imagen" src="../{{imagen.[0]}}" width="200px">
-            <h3 class="producto__nombre">{{nombre}}</h3>
-            <p class="producto__precio">{{precio}}</p>
-            <p class="producto__tipo">{{tipo}}</p>
-            <button name="{{nombre}}" class="agregarProducto">Agregar</button>
-        </div>
+        <section class="app__tienda">
+
+
+<div class="app__tienda__contProd">
+
+  
+            <div class="app__tienda__contProd__producto">
+                <a class="app__tienda__contProd__producto__contenido" href="/product/{{nombre}}">
+                    <img class= "app__tienda__contProd__producto__imagen" src="../{{imagen.[0]}}" width="200px">
+                    <h3 class="app__tienda__contProd__producto__nombre">{{nombre}}</h3>
+                    <p class="app__tienda__contProd__producto__precio">{{precio}} COP</p>
+                   
+                   
+                </a>
+
+                <button name="{{nombre}}" class="producto__agregar">Agregar</button>
+
+            </div>
+         
+
+
+</div>
+
+
+
+        </section>
 
     </div>
 
-</body>
+    <!-- library -->
 
-<script src="/js/main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="/js/libs/parallax.js"></script>
+
+    <script src="/js/libs/swipe.js"></script>
+
+    <script src="/js/main.js"></script>
 <script src="/js/main.js"></script>
 <script src="/js/store.js"></script>
 <script src="/js/carrito.js"></script>
 
+</body>
 
 
 </html>

@@ -142,7 +142,7 @@ app.get('/bag', function(request, response){
 
 // configurar la ruta checkout
 app.get('/checkout', function(request, response){
-  response.send('checkout');
+  response.render('checkout');
 });
 
 // iniciar el servidor en el puerto 3000
