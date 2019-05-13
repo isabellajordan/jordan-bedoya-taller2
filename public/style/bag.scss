@@ -66,26 +66,12 @@ html {
   
   &__banner {
     width: 100%;
-    flex-basis: 100%;
+    flex-basis: auto;
     flex-grow: 0;
     flex-shrink: 0;
   }
   
   
-  /*
-  &__bannerimg {
-    display: flex;
-    justify-content: flex-start;
-    align-content: flex-start;
-    align-items: flex-start;
-    height: 100vh;
-    width: 100%;
-    //  background-image: url(/images/banner1.png);
-    // background-size: cover;
-  }
-  */
-
-
   &__header {
     display: flex;
     flex-direction: column;

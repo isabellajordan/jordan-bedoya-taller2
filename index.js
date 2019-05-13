@@ -149,18 +149,36 @@ query.precio= { $lte:request.query.precio};
   });
 });
 
-// configurar la ruta bag
+// configurar el post checkout
+app.post('/login', function(request, response){
+
+  console.log(request.body);
+ // const products= db.collection('products');
+
+  var pedido = {
+    correo: request.body.correo,
+    contrasena: request.body.contrasena,
+    fecha: new Date(),
+    estado: 'nuevo',
+    productos: JSON.parse(request.body.productos),
+};
+
+var collection = db.collection('pedidos');
+collection.insertOne(pedido, function(err){
+    assert.equal(err, null);
+
+    console.log('pedido guardado');
+});
+
+  response.redirect('/bag');
+});
+
+// configurar la ruta checkout
 app.get('/bag', function(request, response){
 
   const products= db.collection('products');
 
-
   response.render('bag');
-});
-
-// configurar la ruta checkout
-app.get('/checkout', function(request, response){
-  response.render('checkout');
 });
 
 // iniciar el servidor en el puerto 3000
