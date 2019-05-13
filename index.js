@@ -47,6 +47,8 @@ client.connect(function(err) {
 // configurar la carpeta public como "pública"
 app.use(express.static('public'));
 
+app.use(express.urlencoded({ extended: true }));
+
 //Configurar handlebars que es el motor de render
 app.engine('handlebars',motorRender());
 app.set('view engine', 'handlebars');
@@ -137,7 +139,7 @@ query.precio= { $lte:request.query.precio};
     console.log('encontramos los docs');
     
     //nos muestra cuántos documentos tenemos
-    console.log(docs[0]);
+ //   console.log(docs[0]);
     
     
     var contexto = {
