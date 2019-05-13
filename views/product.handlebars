@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="/style/libs/hover.css">
     <link rel="stylesheet" href="/style/libs/swiper.css">
     <link href="https://fonts.googleapis.com/css?family=Raleway|Source+Code+Pro" rel="stylesheet">
-    
+
 </head>
 
 
@@ -62,15 +62,7 @@
 
                 </nav>
 
-
-
-
-
-
             </header>
-
-
-
 
 
         </section>
@@ -78,28 +70,76 @@
 
 
 
-        <section class="app__tienda">
+        <section class="app__vista">
 
+            <div class="app__vista__nav">
 
-<div class="app__tienda__contProd">
-
-  
-            <div class="app__tienda__contProd__producto">
-                <a class="app__tienda__contProd__producto__contenido" href="/product/{{nombre}}">
-                    <img class= "app__tienda__contProd__producto__imagen" src="../{{imagen.[0]}}" width="200px">
-                    <h3 class="app__tienda__contProd__producto__nombre">{{nombre}}</h3>
-                    <p class="app__tienda__contProd__producto__precio">{{precio}} COP</p>
-                   
-                   
+                <a href="#"><img class="app__vista__nav__img" src="/images/back.png" alt=""></a>
+                <a href="/" class="app__vista__nav__links">
+                    <h3>Home</h3>
                 </a>
+                <h3 class="app__vista__nav__links">/</h3>
+                <a href="/store" class="app__vista__nav__links">
+                    <h3>Productos</h3>
+                </a>
+                <h3 class="app__vista__nav__links">/</h3>
+                <h3 id="rutaSelecc" class="app__vista__nav__links">Flores</h3>
 
-                <button name="{{nombre}}" class="producto__agregar">Agregar</button>
 
             </div>
-         
+
+            <!-- Articulo vista del producto -->
+
+            <article class="app__vista__vistaProducto">
+
+                <div class="app__vista__vistaProducto__visual">
 
 
-</div>
+                    <div class="app__vista__vistaProducto__visual__imgArreglo">
+
+                        <div class="app__vista__vistaProducto__visual__imgArreglo__imgs">
+
+                            <img class="app__vista__vistaProducto__visual__imgArreglo__imgs__img"
+                                src="../{{producto.imagen.[0]}}" >
+                            <img class="app__vista__vistaProducto__visual__imgArreglo__imgs__img"
+                                src="../{{producto.imagen.[1]}}">
+                            <img class="app__vista__vistaProducto__visual__imgArreglo__imgs__img"
+                                src="../{{producto.imagen.[2]}}">
+                        </div>
+
+                        <div class="app__vista__vistaProducto__visual__imgArreglo__icons">
+
+<a href="" ><img src="/images/likeEspecific.png" class="app__vista__vistaProducto__visual__imgArreglo__icons__like" alt=""></a>
+
+<a href=""><img src="/images/compartir.png" class="app__vista__vistaProducto__visual__imgArreglo__icons__compartir" alt=""></a>
+
+
+                        </div>
+
+
+                    </div>
+
+                    <div class="app__vista__vistaProducto__visual__imgGrande">
+
+                        <img class="app__vista__vistaProducto__visual__imgGrande__img" src="../{{producto.imagen.[0]}}">
+
+                    </div>
+
+
+
+
+
+                </div>
+
+                <div class="app__vista__vistaProducto__info">
+                    <h3 class="app__vista__vistaProducto__info__nombre">{{producto.nombre}}</h3>
+                    <p class="app__vista__vistaProducto__info__precio">{{producto.precio}} COP</p>
+                    <button name="{{producto.nombre}}" class="app__vista__vistaProducto__info__agregar">Agregar</button>
+
+                </div>
+
+
+            </article>
 
 
 
@@ -115,9 +155,9 @@
     <script src="/js/libs/swipe.js"></script>
 
     <script src="/js/main.js"></script>
-<script src="/js/main.js"></script>
-<script src="/js/store.js"></script>
-<script src="/js/carrito.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/store.js"></script>
+    <script src="/js/carrito.js"></script>
 
 </body>
 

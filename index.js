@@ -113,10 +113,25 @@ app.get('/store/:tipo?', function(request, response){
 // configurar la ruta product
 app.get('/product/:nombre', function(request, response){
 
+  
   //de nuevo base de datos porque se cmabia de link
   const products= db.collection('products');
 
-  products.find({ nombre: request.params.nombre}).toArray(function(err, docs){
+
+  console.log(request.params.nombre);
+  console.log(request.params.precio);
+
+  var query ={};
+
+  if(request.params.nombre){
+query.nombre= request.params.nombre;
+  }
+
+  if(request.query.precio){
+query.precio= { $lte:request.query.precio};
+  }
+
+  products.find(query).toArray(function(err, docs){
     
     assert.equal(null,err);
     console.log('encontramos los docs');
@@ -125,7 +140,10 @@ app.get('/product/:nombre', function(request, response){
     console.log(docs[0]);
     
     
-    var contexto = docs[0];
+    var contexto = {
+      producto: docs[0],
+    };
+    
     
     response.render('product', contexto);
   });

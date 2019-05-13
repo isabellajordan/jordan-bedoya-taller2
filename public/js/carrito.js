@@ -46,7 +46,7 @@ botonesAgregar.forEach(botonProducto =>{
 
 //carrito producto específico
 
-var botonesAgregarProducto = document.querySelectorAll('.agregarProducto');
+var botonesAgregarProducto = document.querySelectorAll('.app__vista__vistaProducto__info__agregar');
 //console.log(botonesAgregar);
 
 botonesAgregarProducto.forEach(botonProducto =>{
@@ -57,9 +57,9 @@ botonesAgregarProducto.forEach(botonProducto =>{
         event.preventDefault;
 
   //agregar el producto
-        var nombre = document.querySelector('.producto__nombre').innerText;
-        var precio = document.querySelector('.producto__precio').innerText;
-        var imagen = document.querySelector('.producto__imagen').src;
+        var nombre = document.querySelector('.app__vista__vistaProducto__info__nombre').innerText;
+        var precio = document.querySelector('.app__vista__vistaProducto__info__precio').innerText;
+        var imagen = document.querySelector('.app__vista__vistaProducto__visual__imgGrande__img').src;
         var producto = {
             nombre: nombre,
             precio: precio,
