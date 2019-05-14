@@ -12,7 +12,11 @@ module.exports = [
         altura: 15,
         color: ['rosa', 'blanco', 'rojo'],
         duracion: '10 días',
-
+        rango: '30 COP - 45 COP',
+        genero: 'Phalaenopsis',
+        descripcion: 'La Rosa Rugosa es empleada principalmente como ornamental por su buen porte y la belleza de sus flores y pétalos. Posee cortas espinas, tallos robustos y fasciculados.',
+        cuidados: '  Debe recibir luz solar directa cada 5 a 6 horas. Regar de 2 a 3 veces por semana en la mañana o en la tarde.',
+        floracion: '2 a 4 meses',
     },
 
     {
@@ -26,13 +30,18 @@ module.exports = [
         altura: 30,
         color: ['rosa', 'blanco', 'rojo'],
         duracion: '20 días',
+        rango: '15 COP - 30 COP',
+        genero: 'Phalaenopsis',
+        descripcion: 'El Arum es empleado principalmente como ornamental por su buen porte y la belleza de sus flores y pétalos. Posee cortas espinas, tallos robustos y fasciculados.',
+        cuidados: '  Debe recibir luz solar directa cada 5 a 6 horas. Regar de 2 a 3 veces por semana en la mañana o en la tarde.',
+        floracion: '2 a 4 meses',
 
     },
 
 
     {
         nombre: 'Astilbe Blanca',
-        precio: 60000,
+        precio: 62000,
         etiqueta: '15% OFF',
         like: false,
         imagen: ['images/astilbeBlanca.png', 'images/astilbeBlanca1.png', 'images/astilbeBlanca2.png' ],
@@ -41,6 +50,11 @@ module.exports = [
         altura: 20,
         color: ['rosa', 'blanco', 'rojo'],
         duracion: '12 días',
+        rango: '60 COP - 75 COP',
+        genero: 'Phalaenopsis',
+        descripcion: 'La Astilbe Blanca es empleada principalmente como ornamental por su buen porte y la belleza de sus flores y pétalos. Posee cortas espinas, tallos robustos y fasciculados.',
+        cuidados: '  Debe recibir luz solar directa cada 5 a 6 horas. Regar de 2 a 3 veces por semana en la mañana o en la tarde.',
+        floracion: '2 a 4 meses',
 
     },
 
@@ -55,6 +69,11 @@ module.exports = [
         altura: 12,
         color: ['rosa', 'blanco', 'rojo'],
         duracion: '25 días',
+        rango: '30 COP - 45 COP',
+        genero: 'Phalaenopsis',
+        descripcion: 'La Celidonia es empleada principalmente como ornamental por su buen porte y la belleza de sus flores y pétalos. Posee cortas espinas, tallos robustos y fasciculados.',
+        cuidados: '  Debe recibir luz solar directa cada 5 a 6 horas. Regar de 2 a 3 veces por semana en la mañana o en la tarde.',
+        floracion: '2 a 4 meses',
 
     },
 
@@ -70,6 +89,11 @@ module.exports = [
         altura: 18,
         color: ['rosa', 'blanco', 'rojo'],
         duracion: '15 días',
+        rango: '45 COP - 60 COP',
+        genero: 'Phalaenopsis',
+        descripcion: 'La Dalia es empleada principalmente como ornamental por su buen porte y la belleza de sus flores y pétalos. Posee cortas espinas, tallos robustos y fasciculados.',
+        cuidados: '  Debe recibir luz solar directa cada 5 a 6 horas. Regar de 2 a 3 veces por semana en la mañana o en la tarde.',
+        floracion: '2 a 4 meses',
 
     },
 
@@ -84,12 +108,17 @@ module.exports = [
         altura: 20,
         color: ['rosa', 'blanco', 'rojo'],
         duracion: '13 días',
+        rango: '45 COP - 60 COP',
+        genero: 'Phalaenopsis',
+        descripcion: 'La Dalia Blanca es empleada principalmente como ornamental por su buen porte y la belleza de sus flores y pétalos. Posee cortas espinas, tallos robustos y fasciculados.',
+        cuidados: '  Debe recibir luz solar directa cada 5 a 6 horas. Regar de 2 a 3 veces por semana en la mañana o en la tarde.',
+        floracion: '2 a 4 meses',
 
     },
 
     {
         nombre: 'Eustoma',
-        precio: 60000,
+        precio: 65000,
         etiqueta: '15% OFF',
         like: false,
         imagen: ['images/eustoma.png', 'images/eustoma1.png', 'images/eustoma2.png' ],
@@ -98,6 +127,11 @@ module.exports = [
         altura: 40,
         color: ['rosa', 'blanco', 'rojo'],
         duracion: '20 días',
+        rango: '60 COP - 75 COP',
+        genero: 'Phalaenopsis',
+        descripcion: 'El Eustoma es empleado principalmente como ornamental por su buen porte y la belleza de sus flores y pétalos. Posee cortas espinas, tallos robustos y fasciculados.',
+        cuidados: '  Debe recibir luz solar directa cada 5 a 6 horas. Regar de 2 a 3 veces por semana en la mañana o en la tarde.',
+        floracion: '2 a 4 meses',
 
     },
 
@@ -112,6 +146,11 @@ module.exports = [
         altura: 70,
         color: ['rosa', 'blanco', 'rojo'],
         duracion: '30 días',
+        rango: '75 COP - 99 COP',
+        genero: 'Phalaenopsis',
+        descripcion: 'El Jazmín es empleado principalmente como ornamental por su buen porte y la belleza de sus flores y pétalos. Posee cortas espinas, tallos robustos y fasciculados.',
+        cuidados: '  Debe recibir luz solar directa cada 5 a 6 horas. Regar de 2 a 3 veces por semana en la mañana o en la tarde.',
+        floracion: '2 a 4 meses',
 
     },
 
@@ -126,6 +165,11 @@ module.exports = [
         altura: 25,
         color: ['rosa', 'blanco', 'rojo'],
         duracion: '25 días',
+        rango: '100 COP +',
+        genero: 'Phalaenopsis',
+        descripcion: 'La Orquídea Blanca es empleada principalmente como ornamental por su buen porte y la belleza de sus flores y pétalos. Posee cortas espinas, tallos robustos y fasciculados.',
+        cuidados: '  Debe recibir luz solar directa cada 5 a 6 horas. Regar de 2 a 3 veces por semana en la mañana o en la tarde.',
+        floracion: '2 a 4 meses',
 
     },
 
@@ -140,6 +184,11 @@ module.exports = [
         altura: 30,
         color: 'rojo',
         duracion: '15 días',
+        rango: '75 COP - 99 COP',
+        genero: 'Phalaenopsis',
+        descripcion: 'La Peonía Roja es empleada principalmente como ornamental por su buen porte y la belleza de sus flores y pétalos. Posee cortas espinas, tallos robustos y fasciculados.',
+        cuidados: '  Debe recibir luz solar directa cada 5 a 6 horas. Regar de 2 a 3 veces por semana en la mañana o en la tarde.',
+        floracion: '2 a 4 meses',
 
     },
 
@@ -154,6 +203,11 @@ module.exports = [
         altura: 35,
         color: 'salmon',
         duracion: '12 días',
+        rango: '75 COP - 99 COP',
+        genero: 'Phalaenopsis',
+        descripcion: 'La Peonía Salmón es empleada principalmente como ornamental por su buen porte y la belleza de sus flores y pétalos. Posee cortas espinas, tallos robustos y fasciculados.',
+        cuidados: '  Debe recibir luz solar directa cada 5 a 6 horas. Regar de 2 a 3 veces por semana en la mañana o en la tarde.',
+        floracion: '2 a 4 meses',
 
     },
 
@@ -168,6 +222,11 @@ module.exports = [
         altura: 50,
         color: 'violeta',
         duracion: '17 días',
+        rango: '75 COP - 99 COP',
+        genero: 'Phalaenopsis',
+        descripcion: 'La Peonía Violeta es empleada principalmente como ornamental por su buen porte y la belleza de sus flores y pétalos. Posee cortas espinas, tallos robustos y fasciculados.',
+        cuidados: '  Debe recibir luz solar directa cada 5 a 6 horas. Regar de 2 a 3 veces por semana en la mañana o en la tarde.',
+        floracion: '2 a 4 meses',
 
     },
 
@@ -182,6 +241,11 @@ module.exports = [
         altura: 30,
         color: 'blanco',
         duracion: '10 días',
+        rango: '45 COP - 60 COP',
+        genero: 'Phalaenopsis',
+        descripcion: 'La Peonía Blanca es empleada principalmente como ornamental por su buen porte y la belleza de sus flores y pétalos. Posee cortas espinas, tallos robustos y fasciculados.',
+        cuidados: '  Debe recibir luz solar directa cada 5 a 6 horas. Regar de 2 a 3 veces por semana en la mañana o en la tarde.',
+        floracion: '2 a 4 meses',
 
     },
 
@@ -197,6 +261,11 @@ module.exports = [
         altura: 50,
         color: ['rosa', 'blanco', 'rojo'],
         duracion: '17 días',
+        rango: '45 COP - 60 COP',
+        genero: 'Phalaenopsis',
+        descripcion: 'El Ranúnculo es empleada principalmente como ornamental por su buen porte y la belleza de sus flores y pétalos. Posee cortas espinas, tallos robustos y fasciculados.',
+        cuidados: '  Debe recibir luz solar directa cada 5 a 6 horas. Regar de 2 a 3 veces por semana en la mañana o en la tarde.',
+        floracion: '2 a 4 meses',
 
     },
 
@@ -212,6 +281,12 @@ module.exports = [
         altura: 15,
         color: ['rosa', 'blanco', 'rojo'],
         duracion: '8 días',
+        rango: '30 COP - 45 COP',
+        genero: 'Phalaenopsis',
+        descripcion: 'La Rosa Combinada es empleada principalmente como ornamental por su buen porte y la belleza de sus flores y pétalos. Posee cortas espinas, tallos robustos y fasciculados.',
+        cuidados: '  Debe recibir luz solar directa cada 5 a 6 horas. Regar de 2 a 3 veces por semana en la mañana o en la tarde.',
+        floracion: '2 a 4 meses',
+
 
     },
 
@@ -226,6 +301,11 @@ module.exports = [
         altura: 13,
         color: ['rosa', 'blanco', 'rojo'],
         duracion: '5 días',
+        rango: '15 COP - 30 COP',
+        genero: 'Phalaenopsis',
+        descripcion: 'La Rosa Común es empleada principalmente como ornamental por su buen porte y la belleza de sus flores y pétalos. Posee cortas espinas, tallos robustos y fasciculados.',
+        cuidados: '  Debe recibir luz solar directa cada 5 a 6 horas. Regar de 2 a 3 veces por semana en la mañana o en la tarde.',
+        floracion: '2 a 4 meses',
 
     },
 
@@ -240,6 +320,11 @@ module.exports = [
         altura: 13,
         color: ['rosa', 'blanco', 'rojo','amarillo'],
         duracion: '7 días',
+        rango: '30 COP - 45 COP',
+        genero: 'Phalaenopsis',
+        descripcion: 'La Rosa de Jardín es empleada principalmente como ornamental por su buen porte y la belleza de sus flores y pétalos. Posee cortas espinas, tallos robustos y fasciculados.',
+        cuidados: '  Debe recibir luz solar directa cada 5 a 6 horas. Regar de 2 a 3 veces por semana en la mañana o en la tarde.',
+        floracion: '2 a 4 meses',
 
     },
 
@@ -254,12 +339,13 @@ module.exports = [
         altura: 12,
         color: ['rosa', 'blanco', 'rojo','amarillo'],
         duracion: '4 días',
+        rango: '15 COP - 30 COP',
 
     },
 
     {
         nombre: 'Rosa Rugosa Roja',
-        precio: 40000,
+        precio: 43000,
         etiqueta: '15% OFF',
         like: false,
         imagen: ['images/rosaRugosaRoja.png', 'images/rosaRugosaRoja1.png', 'rosaRugosaRoja2.png' ],
@@ -268,6 +354,11 @@ module.exports = [
         altura: 15,
         color: 'rojo',
         duracion: '7 días',
+        rango: '30 COP - 45 COP',
+        genero: 'Phalaenopsis',
+        descripcion: 'La Rosa Julieta es empleada principalmente como ornamental por su buen porte y la belleza de sus flores y pétalos. Posee cortas espinas, tallos robustos y fasciculados.',
+        cuidados: '  Debe recibir luz solar directa cada 5 a 6 horas. Regar de 2 a 3 veces por semana en la mañana o en la tarde.',
+        floracion: '2 a 4 meses',
 
     },
 
@@ -282,6 +373,11 @@ module.exports = [
         altura: 35,
         color: ['rosa', 'blanco', 'rojo','amarillo'],
         duracion: '15 días',
+        rango: '30 COP - 45 COP',
+        genero: 'Phalaenopsis',
+        descripcion: 'La Verbena es empleada principalmente como ornamental por su buen porte y la belleza de sus flores y pétalos. Posee cortas espinas, tallos robustos y fasciculados.',
+        cuidados: '  Debe recibir luz solar directa cada 5 a 6 horas. Regar de 2 a 3 veces por semana en la mañana o en la tarde.',
+        floracion: '2 a 4 meses',
 
     },
 

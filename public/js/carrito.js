@@ -108,7 +108,6 @@ function actualizarCarrito() {
             <img class="producto__imagen" src="${producto.imagen}" width="200px">
             <h3 class="producto__nombre">${producto.nombre}</h3>
             <p class="producto__precio">${producto.precio}</p>
-            <p class="producto__tipo">${producto.tipo}</p>
             <button class= "producto__eliminar">Eliminar</button>
          
         </div>

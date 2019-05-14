@@ -85,6 +85,13 @@ app.get('/store/:tipo?', function(request, response){
     query.altura = { $lte: parseInt(request.query.altura)};
   }
 
+  
+  if (request.query.rango){
+    query.rango = request.query.rango;
+  }
+
+
+
   console.log(request.query.tipo);
   
   //dentro de esta función tenemos los resultados de ir a buscar los productos
@@ -99,13 +106,13 @@ app.get('/store/:tipo?', function(request, response){
       productos: docs,
       valorAltura: request.query.altura|10,
       tipo: request.params.tipo,
-
       //esto ño
       esrosas: request.params.tipo == "rosas",
       esclaveles: request.params.tipo == "claveles",
       esorquideas: request.params.tipo == "orquideas",
       
     };
+
     console.log(contexto.productos, "ESTOS SON LOS PRODUCTOS QUE PASO AL HBS ----------- UNICRONIOS ROSA DE EL VLAOR DEL INFINITO MEINAHFBSF");
     response.render('store', contexto);
   });

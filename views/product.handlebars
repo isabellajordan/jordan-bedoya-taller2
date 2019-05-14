@@ -100,7 +100,7 @@
                         <div class="app__vista__vistaProducto__visual__imgArreglo__imgs">
 
                             <img class="app__vista__vistaProducto__visual__imgArreglo__imgs__img"
-                                src="../{{producto.imagen.[0]}}" >
+                                src="../{{producto.imagen.[0]}}">
                             <img class="app__vista__vistaProducto__visual__imgArreglo__imgs__img"
                                 src="../{{producto.imagen.[1]}}">
                             <img class="app__vista__vistaProducto__visual__imgArreglo__imgs__img"
@@ -109,9 +109,11 @@
 
                         <div class="app__vista__vistaProducto__visual__imgArreglo__icons">
 
-<a href="" ><img src="/images/likeEspecific.png" class="app__vista__vistaProducto__visual__imgArreglo__icons__like" alt=""></a>
+                            <a href=""><img src="/images/likeEspecific.png"
+                                    class="app__vista__vistaProducto__visual__imgArreglo__icons__like" alt=""></a>
 
-<a href=""><img src="/images/compartir.png" class="app__vista__vistaProducto__visual__imgArreglo__icons__compartir" alt=""></a>
+                            <a href=""><img src="/images/compartir.png"
+                                    class="app__vista__vistaProducto__visual__imgArreglo__icons__compartir" alt=""></a>
 
 
                         </div>
@@ -132,9 +134,61 @@
                 </div>
 
                 <div class="app__vista__vistaProducto__info">
-                    <h3 class="app__vista__vistaProducto__info__nombre">{{producto.nombre}}</h3>
+                    <h3 class="app__vista__vistaProducto__info__vendidos">55 vendidos</h3>
+                    <h1 class="app__vista__vistaProducto__info__nombre">{{producto.nombre}} </h1>
                     <p class="app__vista__vistaProducto__info__precio">${{producto.precio}}</p>
-                    <button name="{{producto.nombre}}" class="app__vista__vistaProducto__info__agregar">Agregar</button>
+                    <div class="app__vista__vistaProducto__info__calificacion">
+
+                        <div class="app__vista__estrellas">
+
+                        </div>
+
+                        <div class="app__vista__opiniones">
+
+                        </div>
+
+                    </div>
+
+                    <h3 class="app__vista__vistaProducto__info__cantidad">Cantidad:</h3>
+
+                    <select class="app__vista__vistaProducto__info__cantidadNum" name="cantidad">
+
+
+ <option selected value="0" id="selecciona"> Selecciona la cantidad </option>
+ <option id="opciones">1 unidad</option>
+<option id="opciones" >2 unidades</option>
+<option id="opciones">3 unidades</option>
+<option id="opciones">4 unidades</option>
+<option id="opciones">5 unidades</option>
+<option id="opciones">6 unidades</option>
+<option id="agregarMas">Agregar más cantidad</option>
+
+
+</select>
+
+  <h3 class="app__vista__vistaProducto__info__tipo">Tipo: {{producto.tipo}}</h3>
+    <h3 class="app__vista__vistaProducto__info__altura">Altura: {{producto.altura}} aproximadamente</h3>
+
+ <h3  class="app__vista__vistaProducto__info__coloresTit">Colores:</h3>
+
+    <div class="app__vista__coloresDiv">
+ 
+  <div class="app__vista__coloresDiv__rosa">    
+ </div>
+
+ <div class="app__vista__coloresDiv__rojo">    
+ </div>
+ 
+ <div class="app__vista__coloresDiv__rosaPale">    
+ </div>
+
+    </div>
+      
+
+        <h3 class="app__vista__vistaProducto__info__descTit">Descripción:</h3>
+        <h3 class="app__vista__vistaProducto__info__descripción">{{producto.descripcion}} </h3>
+
+                    <button name="{{producto.nombre}}" class="app__vista__vistaProducto__info__agregar" id="boton">Agregar a la bolsa</button>
 
                 </div>
 
