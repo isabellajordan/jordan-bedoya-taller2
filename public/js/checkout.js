@@ -7,6 +7,7 @@ window.addEventListener('load', function(){
         var input = document.querySelector('.input-productos');
         input.value = localStorage.getItem('listaProductos');
 
+        //esto envía producto
         localStorage.removeItem('listaProductos');
     }
     form.addEventListener('submit', enviarProductos);

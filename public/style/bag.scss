@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i,800,800i");
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,500,700,700i,800,900");
+
 $colorRosa: #ffa38f;
 $colorBodyText: #545454;
 $colorTitulos: #5f5f5f;
@@ -161,6 +164,87 @@ html {
 
     display: flex;
     flex-direction: column;
+  }
+
+
+  &__carrito-desplegado{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex-shrink: 0;
+    width: 90%;
+    height: auto;
+    min-height: auto;
+    background: #515151;
+  }
+
+  &__carritop{
+
+width: 100%;
+height: auto;
+background: coral;
+display: flex;
+justify-content: space-between;
+
+
+&__img{
+
+  width: 30%;
+  height: auto;
+  background: #d7dd86;
+
+}
+
+&__info{
+width: 65%;
+height: auto;
+background: gray;
+
+&__nombre{
+
+}
+
+&__cantidadDiv{
+
+  width: 150px;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+}
+
+&__icono{
+  width: 5%;
+  height: auto;
+  background: rgb(216, 119, 119);
+
+a{
+  text-decoration: none;
+}
+
+&__basura{
+  width: 70%;
+  height: auto;
+}
+
+  }
+  
+  &__num{
+    margin-top: 10px;
+    font-family: "Open Sans", sans-serif;
+    font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 23px;
+
+  }
+
+
+
+
+
   }
   
 }

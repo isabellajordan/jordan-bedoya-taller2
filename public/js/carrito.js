@@ -8,7 +8,7 @@ if (localStorage.getItem('listaProductos') != null) {
     listaProductos = JSON.parse(localStorage.getItem('listaProductos'));
 }
 
-var listaCarrito = document.querySelector('.carrito-desplegado__lista');
+var listaCarrito = document.querySelector('.app__carrito-desplegado__lista');
 var carritoNum = document.querySelector('.carrito__num');
 
 
@@ -103,6 +103,44 @@ function actualizarCarrito() {
 
         listaProductos.forEach(function (producto, index) {
 
+            listaCarrito.innerHTML += `            <ul  class="app__carrito-desplegado__lista">
+<div class="app__carritop">
+
+<img class="app__carritop__img" src="${producto.imagen}" alt="">
+
+<div class="app__carritop__info">
+
+<h1 class="app__carritop__info__nombre">${producto.nombre}</h1>
+
+<h3 class="app__carritop__info__id">ID</h3>
+<h3 class="app__carritop__info__precio">Precio unitario: ${producto.precio}</h3>
+
+<div class="app__carritop__info__cantidadDiv">
+
+<img class="app__carritop__menos" src="/images/menos.png" alt="">
+
+<h1 class="app__carritop__num">1</h1>
+
+<img class="app__carritop__mas" src="/images/mas.png" alt="">
+
+</div>
+</div>
+<div class="app__carritop__icono">
+
+<a href=""><img class="app__carritop__icono__basura" src="/images/garbage.png" alt=""></a>
+
+</div>
+
+
+</div>
+        </ul>
+        
+        `;
+
+
+
+
+            /*
             listaCarrito.innerHTML += `            <ul>
             <div class="producto">
             <img class="producto__imagen" src="${producto.imagen}" width="200px">
@@ -114,6 +152,8 @@ function actualizarCarrito() {
         </ul>
         
         `;
+
+        */
 
             console.log(producto.precio);
 
@@ -133,7 +173,7 @@ function actualizarCarrito() {
             }
 
 
-            var btnEliminar= document.querySelectorAll('.producto__eliminar');
+            var btnEliminar= document.querySelectorAll('.app__carritop__icono__basura');
 
            for (let i = 0; i < btnEliminar.length; i++) {
               btnEliminar[i].addEventListener('click', (function btnEliminar(){
