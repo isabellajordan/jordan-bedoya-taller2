@@ -106,14 +106,17 @@ function actualizarCarrito() {
             listaCarrito.innerHTML += `            <ul  class="app__carrito-desplegado__lista">
 <div class="app__carritop">
 
+<div class="app__carritop__imagen">
 <img class="app__carritop__img" src="${producto.imagen}" alt="">
+</div>
+
 
 <div class="app__carritop__info">
 
 <h1 class="app__carritop__info__nombre">${producto.nombre}</h1>
 
-<h3 class="app__carritop__info__id">ID</h3>
-<h3 class="app__carritop__info__precio">Precio unitario: ${producto.precio}</h3>
+<h3 class="app__carritop__info__id">SKU 1234567890</h3>
+<h3 class="app__carritop__info__precio">  Precio unitario: <strong> ${producto.precio} </strong></h3>
 
 <div class="app__carritop__info__cantidadDiv">
 
