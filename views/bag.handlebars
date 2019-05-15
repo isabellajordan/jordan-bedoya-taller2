@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-     <link rel="stylesheet" href="/style/libs/hover.css">
+    <link rel="stylesheet" href="/style/libs/hover.css">
     <link rel="stylesheet" href="/style/libs/swiper.css">
     <link href="https://fonts.googleapis.com/css?family=Raleway|Source+Code+Pro" rel="stylesheet">
     <link rel="stylesheet" href="/style/bag.css">
 </head>
+
 <body>
 
-<div class="app">
+    <div class="app">
 
 
 
@@ -60,50 +62,67 @@
         </section>
 
 
- <form action="/login" method="POST">
 
-        <label for="">Correo</label>
-        <input name="correo" type="email" placeholder="correo@ejemplo.com" value="correo@ejemplo.com">
+        <form action="/login" method="POST">
 
-        <label for="">Contraseña</label>
-        <input name="contrasena" type="password" placeholder="contraseña">
+            <label for="">Correo</label>
+            <input name="correo" type="email" placeholder="correo@ejemplo.com" value="correo@ejemplo.com">
 
-<input class="input-productos" type="hidden" name="productos" value="hola">
+            <label for="">Contraseña</label>
+            <input name="contrasena" type="password" placeholder="contraseña">
 
-        <button>Ingresar</button>
-    </form>
+            <input class="input-productos" type="hidden" name="productos" value="hola">
 
-    <h1 class="total-producto">Total</h1>
-    <h3 class="subtotal-producto" ></h3>
-    
-<div class="carrito">
+            <button>Ingresar</button>
+        </form>
+
+
+        <div class="carrito">
             <p>Carrito</p>
             <span class="carrito__num"></span>
         </div>
 
-        <button class="carrito-desplegado__limpiar">Limpiar carrito</button>
+       
 
-        
-        <div class="app__carrito-desplegado">
-            <h3>Carrito</h3>
-            <ul class="app__carrito-desplegado__lista">
+<h3>Carrito</h3>
 
+        <div class="app__bagRow">
+
+
+
+            <div class="app__carrito-desplegado">
                 
-            </ul>
-</div>
-
-<section class="app__resumen">
-
-<div class="app__resumenContenedor"></div>
+                <ul class="app__carrito-desplegado__lista">
 
 
-</section>
+                </ul>
+            </div>
 
 
 
-</div>
 
-  <script src="/js/libs/swipe.js"></script>
+            <section class="app__resumen">
+
+                <div class="app__resumenContenedor">
+
+                    <h1 class="app__resumenContenedor__tit">Resumen</h1>
+
+
+                    <h1 class="app__resumenContenedor__total">Total de los productos</h1>
+                    <h3 class="app__resumenContenedor__totalNum"></h3>
+
+
+                </div>
+
+
+            </section>
+        </div>
+
+    </div>
+
+
+
+    <script src="/js/libs/swipe.js"></script>
 
     <script src="/js/main.js"></script>
     <script src="/js/store.js"></script>

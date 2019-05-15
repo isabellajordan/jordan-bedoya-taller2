@@ -67,6 +67,11 @@ html {
   align-items: center;
   
   
+h2{
+
+
+}
+
   &__banner {
     width: 100%;
     flex-basis: auto;
@@ -166,6 +171,18 @@ html {
     flex-direction: column;
   }
 
+  &__bagRow{
+    display: flex;
+    flex-direction: row;
+    flex-basis: 100%;
+    flex-shrink: 0;
+    width: 90%;
+    height: auto;
+    min-height: auto;
+   
+   // background: #515151;
+  }
+
 
   &__carrito-desplegado{
     display: flex;
@@ -175,7 +192,7 @@ html {
     width: 90%;
     height: auto;
     min-height: auto;
-   // background: #515151;
+   //background: #515151;
 
 
     &__lista{
@@ -184,6 +201,8 @@ html {
     }
 
   }
+
+
 
   &__carritop{
 
@@ -287,8 +306,22 @@ line-height: 23px;
   }
 
   
+  }
 
+  &__resumen{
+    
+width: 80%;
+height: auto;
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+padding: 20px;
+border-style: dotted; 
+    border-width: 2px; 
+    border-color: $colorRosa;
 
   }
+
+
   
 }

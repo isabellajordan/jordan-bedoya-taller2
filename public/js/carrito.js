@@ -81,8 +81,8 @@ botonesAgregarProducto.forEach(botonProducto => {
 });
 
 
-var total = document.querySelector('.total-producto');
-var subtotal = document.querySelector('.subtotal-producto');
+var total = document.querySelector('.app__resumenContenedor__total');
+var subtotal = document.querySelector('.app__resumenContenedor__totalNum');
 
 
 
